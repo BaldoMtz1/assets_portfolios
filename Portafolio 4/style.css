@@ -1,0 +1,688 @@
+:root{
+    --GrisClaro: #D1CECA; 
+    --AzulMarino: #03051c;
+    --AzulMenta: #34B0BE;
+    --Blanco: #FFFFFF;
+    --GrisTransparente: #323341;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: #242635; */
+    font-family: sans-serif;
+}
+
+body{
+
+    background-color: var(--AzulMarino);
+    color: var(--Blanco);
+    /* font-family: sans-serif; */
+    font-size: 18px;
+
+}
+
+/* HEADER- NAV-BAR*/
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    height: 80px;
+}
+
+label img{
+    width: 45px;
+    padding-right: 0.5rem;
+}
+
+
+#btn-menu{
+    visibility: hidden;
+    transition: linear .5s;
+    
+}
+
+.items-menu a{
+    text-decoration: none;
+    color: black;
+
+}
+
+
+
+.items-menu{
+    position: absolute;
+    background-color: var(--GrisClaro);
+    
+    width: 100%;
+    right: 0;
+    top: 80px;
+    /* background-color: var(--AzulMarino); */
+    min-height: calc(100vh - 80px);
+    padding: 1.5rem 1rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    display: none;
+    position: fixed;
+    
+    color: var(--Blanco)
+    
+}
+
+#btn-menu:checked ~ .items-menu{
+    display: flex;
+
+    left: 0;
+
+   
+}
+
+
+
+@media ( min-width: 600px)  {
+
+    label{
+        display: none;
+
+    }
+     
+    .nav-menu{
+        margin-right: 1.5rem;
+    }
+
+    .items-menu{
+        position: static;
+        min-height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        gap: 2.5rem;
+        background-color: transparent;
+        
+    }
+    
+
+    .items-menu a{
+        text-decoration: none;
+        color: var(--Blanco);
+    
+    }
+}
+
+
+/* SECCION INFORMACION*/
+
+.aboutMe{
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    font-size: 18px;
+
+}
+
+.aboutMe-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-profile{
+
+    /* background-color: var(--GrisTransparente); */
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.fondo_img{
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     background-color: var(--GrisTransparente);
+     
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.icons-social_media{
+    
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    margin: 0 auto;
+    
+
+}
+
+
+.icons-social_media img{
+    background-color: white;
+    width: 40px;
+}
+
+.icon{
+
+    width: 30px;
+
+    border-radius: 50%;
+    gap: 2rem;
+
+    
+
+}
+
+
+
+.aboutMe-info h1{
+    font-size: 50px;
+    color: var(--AzulMenta);
+    margin-bottom: 2px ;
+}
+
+.aboutMe-info h2{
+    font-size: 32px;
+}
+
+
+
+
+.aboutMe-info p{
+    margin-bottom: 1rem;
+
+}
+
+.letter-azul{
+    color: var(--AzulMenta);
+    text-align: center;
+}
+
+.aboutMe-info hr{
+    width: 240px;
+    margin-bottom: 1rem;
+    color: var(--Blanco);
+    
+}
+
+
+
+@media (min-width: 600px) {
+
+    body{
+        max-width: 1024px;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .aboutMe{
+        padding: 1rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 1rem;
+        font-size: 18px;
+    
+    }
+
+    .aboutMe-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 1.5rem;
+        font-size: 20px;
+    }
+
+    .img-profile{
+
+        /* background-color: var(--GrisTransparente); */
+        /* max-width: 350px;
+        margin: 0 auto; */
+    }
+
+    .aboutMe .fondo_img{
+        background-color: red;
+    }
+
+    .fondo_img> img{
+        max-width: 550px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         background-color: var(--GrisTransparente);
+         
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+    
+    .icons-social_media{
+        
+        border-radius: 50%;
+        display: flex;
+        flex-direction: row;
+        gap: 2.5rem;
+        margin: 0 auto;
+        
+    
+    }
+    
+    
+    .icons-social_media img{
+        background-color: white;
+        width: 40px;
+    }
+    
+    .icon{
+    
+        width: 30px;
+    
+        border-radius: 50%;
+        gap: 2rem;
+    
+        
+    
+    }
+    
+    
+    
+    .aboutMe-info h1{
+        font-size: 50px;
+        color: var(--AzulMenta);
+        margin-bottom: 2px ;
+    }
+    
+    .aboutMe-info h2{
+        font-size: 32px;
+    }
+    
+    
+    
+    
+    .aboutMe-info p{
+        margin-bottom: 1rem;
+    
+    }
+    
+    .letter-azul{
+        color: var(--AzulMenta);
+    }
+    
+    .aboutMe-info hr{
+        width: 240px;
+        margin-bottom: 1rem;
+        color: var(--Blanco);
+        
+    }
+
+    .aboutMe_2{
+        max-width: 900px;
+        padding-top: 30px;
+        max-height: 150px;
+        display: flex;
+        justify-content: center;
+        /* z-index: -1;
+        margin: 0 auto; */
+    }
+    
+
+    
+}
+
+
+.aboutMe_2{
+    background-color:var(--GrisTransparente);
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 1.5rem;
+    z-index: -1;
+        /* margin: 0 auto; */
+}
+
+.icon-box{
+    width: 65px;
+    height: 50px;
+
+    background-color:var(--GrisClaro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 1rem;
+    padding: 1rem;
+    overflow-wrap: normal;
+}
+
+
+.icon-uno{
+    width: 45px;
+    
+}
+
+.icon-dos{
+    width: 50px;
+    align-self: unset;
+}
+
+.icon-tes{
+    width: 40px;
+}
+
+
+/* ACERCA DE MI */
+
+
+.acerca-de-mi{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    gap: 1.5rem;
+}
+
+.acerca-de-mi p{
+    padding: 1rem;
+    text-align: center;
+    
+}
+
+
+/* SECCION DE SERVICIOS */
+
+.servicios_slider{
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    align-items: center;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 1rem 1.5rem;
+    /* margin-top: 1rem; */
+
+    /* background-color: red; */
+}
+
+.servicios_slider h2{
+    margin-bottom: 1.5rem;
+}
+
+.Serv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Blanco);
+    color: var(--GrisClaro);
+    padding: 1rem 1.5rem;
+
+    /* max-width: 250px; */
+    /* min-height: 320px; */
+    gap: 1rem;
+    font-size: 18px;
+    border-radius: 6px;
+    text-align: center;
+    
+}
+
+.servicios h2{
+    color: black;
+}
+
+.servicios_icon{
+    width: 110px;
+}
+
+
+
+/* MIS HABILIDADES */
+
+
+.skills__progress{
+    padding: 1rem 1.5rem;
+    /* width: 400px;
+    height: 300px; */
+    /* border: 2px solid darkcyan; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.barra_{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+ 
+    
+    width: 100%;
+    height: 1.5rem;
+    background-color: #fff;
+    border-radius: 1.3rem;
+    
+   
+}
+
+.skills__progress .text_{
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress_html{
+
+    width: 80%;
+    height: 1.5rem;
+    
+    background-color: var(--AzulMenta);
+    border-radius: 1.3rem;
+     
+}
+
+.progress_css{
+    width: 65%;
+    height: 1.5rem;
+    
+    background-color: var(--AzulMenta);
+    border-radius: 1.3rem;
+
+}
+
+.progress_js{
+    width: calc(70%);
+    height: 1.5rem;
+    
+    background-color: var(--AzulMenta);
+    border-radius: 1.3rem;
+
+}
+
+
+/* MI PORTAFOLIO */
+
+.mi_portafolio{
+    margin: 1.5rem auto;
+
+    width: 85%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+ 
+}
+
+.mi_portafolio h2{
+    padding-bottom: 1rem;
+}
+
+.galeria{
+    /* background-color: red; */
+    display: flex;
+    gap: 1rem;
+    /* justify-content: space-around; */
+}
+
+.img{
+    max-width: 300px;
+    height: 400px;
+    overflow: hidden;
+    
+}
+
+.portafolio_img1{
+   
+}
+
+/* SECCION CONTACTO */
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.contacto .box{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--Blanco);
+    color: var(--GrisClaro);
+    padding: 1rem 1.5rem;
+
+    /* max-width: 250px; */
+    min-height: 240px;
+    gap: 1rem;
+    font-size: 18px;
+    border-radius: 6px;
+    text-align: center;
+    min-width: 250px;
+
+}
+
+
+.span{
+
+    
+   display: flex;
+   justify-content: center;
+    margin: 2.5rem auto;
+    color: var(--AzulMenta);
+    font-size: 14px;
+}
+
+
+/* RESPONSIVE DESKTOP */
+
+@media ( min-width: 700px)  {
+
+    body{
+        max-width: 1024px;
+        font-size: 18px;
+    }
+
+   .aboutMe{
+    display: flex;
+    flex-direction: row-reverse;
+   }
+
+   .aboutMe-info{
+    font-size: 18px;
+    align-items: flex-start;
+    padding-left: 1.5rem;
+
+   }
+
+   .soy{
+    font-size: 50px;
+    
+   }
+
+   .letter-azul{
+    font-size: 40px;
+   }
+
+   .icons-social_media{
+    margin-right: 10rem;
+   }
+
+
+   .aboutMe_2{
+    max-width: 900px;
+    margin: auto;
+    margin-left: auto;
+    /* max-height: 200px; */
+    height: 200px;
+   }
+
+   .icon-box{
+    width: 150px;
+    height: 100px;
+   } 
+
+   .servicios_slider{
+    margin: auto;
+
+   }
+
+   .swiper{
+
+
+   }
+
+   .servicios{
+
+    max-width: 300px;
+
+   }
+
+   .mi_portafolio{
+    margin-bottom: 2rem;
+   }
+
+
+   .contacto{
+    /* display: flex;
+    flex-direction: row; */
+    margin-top: 1.5rem;
+   }
+
+   .contacto_conteiner_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 12rem;
+    margin-top: 2rem;
+    margin-top: 1.5rem;
+   }
+
+
+   .span{
+    margin-top: 5rem;
+   }
+
+
+
+   
+
+
+}
